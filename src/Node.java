@@ -17,6 +17,8 @@ public class Node {
       */
      private Node left;
 
+     private int height;
+
      /**
       * Valor armazenado neste nó.
       */
@@ -37,6 +39,7 @@ public class Node {
      public Node(String value, Line line) {
           this.value = value;
           this.myLineList.insertEnd(line);
+          this.height = 1;
      }
 
      /**
@@ -75,6 +78,14 @@ public class Node {
       */
      public void setLeft(Node left) {
           this.left = left;
+     }
+
+     public int getHeight() {
+          return height;
+     }
+
+     public void setHeight(int heightInformed) {
+          this.height = heightInformed;
      }
 
      /**
